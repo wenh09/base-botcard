@@ -36,7 +36,7 @@ description: 生成飞书多维表格（Base）功能推广卡片的 JSON 2.0 .c
 
 ### Step 2 · 写文案
 
-- **第一步（必做，别跳）**：先翻 [references/golden-examples.md](references/golden-examples.md) 选**最像的 archetype 标杆**，照它句式与节奏**仿写**，再换成本次内容。**别只凭规则空想首稿**——只靠规则容易"合规但不地道"（真实教训：端到端那次没仿样例、靠规则硬写，磨了 6 轮）。skill 发给别人后他们没本地语料，**只能靠这里的内嵌样例**，所以这步是自包含的关键。
+- **第一步（必做，别跳）**：先用 [references/golden-examples.md](references/golden-examples.md) 的**检索表**（按 类型/子类/领域/形态/句式 打标）定位最像的 1-2 张标杆，照它句式与节奏**仿写**，再换成本次内容。**别只凭规则空想首稿**——只靠规则容易"合规但不地道"（真实教训：端到端那次没仿样例、靠规则硬写，磨了 6 轮）。skill 发给别人后他们没本地语料，**只能靠这里的内嵌样例**，所以这步是自包含的关键。
 - 写作规则：[references/copy-rules.md](references/copy-rules.md)（句式/痛点/量化/tag·尾注/CTA/emoji/称呼）
 - **写完必过** [references/copy-checklist.md](references/copy-checklist.md) 黑名单自检
 - 出稿时**主动标出没把握的句子**，把用户注意力导到该抠处
