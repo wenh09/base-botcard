@@ -36,8 +36,8 @@ description: 生成飞书多维表格（Base）功能推广卡片的 JSON 2.0 .c
 
 ### Step 2 · 写文案
 
-- 怎么写：[references/copy-rules.md](references/copy-rules.md)（句式/痛点/量化/tag·尾注/CTA/emoji/称呼）
-- 仿写：[references/golden-examples.md](references/golden-examples.md)（先翻最像的标杆，仿句式与节奏）
+- **第一步（必做，别跳）**：先翻 [references/golden-examples.md](references/golden-examples.md) 选**最像的 archetype 标杆**，照它句式与节奏**仿写**，再换成本次内容。**别只凭规则空想首稿**——只靠规则容易"合规但不地道"（真实教训：端到端那次没仿样例、靠规则硬写，磨了 6 轮）。skill 发给别人后他们没本地语料，**只能靠这里的内嵌样例**，所以这步是自包含的关键。
+- 写作规则：[references/copy-rules.md](references/copy-rules.md)（句式/痛点/量化/tag·尾注/CTA/emoji/称呼）
 - **写完必过** [references/copy-checklist.md](references/copy-checklist.md) 黑名单自检
 - 出稿时**主动标出没把握的句子**，把用户注意力导到该抠处
 
@@ -69,9 +69,15 @@ bash bin/preview.sh <你的.card文件> <接收者open_id>
 ```
 自动抽 dsl、去占位 img、替换占位 URL、`--as bot` 发到指定 open_id 的 DM。
 
+> **前提**：本机装了 lark-cli，且已**授权一个有 IM 权限的应用**——预览卡片就是通过这个 lark-cli 授权的应用（bot）发出的。没装/没权限就跳过 IM 预览，改走 Step 7 的 CardKit。
+
 ### Step 7 · 交付
 
-输出 `.card` + TODO 清单：`IMG_KEY_TODO`（头图，见下）、按钮真实链接（四端都填）。
+输出 `.card` 文件 + TODO 清单：`IMG_KEY_TODO`（头图，见下）、按钮真实链接（四端都填）。
+
+**`.card` 怎么用（两条路，用户自己选）**：
+- **直接发**：用 Step 6 的 IM 预览卡片直接发出
+- **导入精修**：把 `.card` 导入 [open.larkoffice.com/cardkit](https://open.larkoffice.com/cardkit)，渲染 + 可视化精调，再发给自己 / 群
 
 ### Step 8 · 持续迭代（让 skill 越用越准）
 

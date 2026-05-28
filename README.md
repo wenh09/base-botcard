@@ -57,6 +57,9 @@ base-botcard/
 - 图片是 **bot-only 上传**，文案阶段先留 `IMG_KEY_TODO`
 - padding/margin 一律 **4 值形式**；markdown 必带 `text_align` + `text_size:"normal_v2"`
 
-## 预览发送依赖
+## 预览 / 导出（两条路，用户自己选）
 
-需要本机装好并登录 [lark-cli](https://github.com/larksuite/cli)。`bin/preview.sh` 用 `--as bot` 发卡，接收者 open_id 由第二个参数或环境变量 `LARK_PREVIEW_TO` 指定。
+- **IM 预览**：需本机装并授权 [lark-cli](https://github.com/larksuite/cli)（授权的应用要有 IM 权限）；`bin/preview.sh` 通过该应用以 `--as bot` 把卡片发到你 DM。open_id 由第二参数或环境变量 `LARK_PREVIEW_TO` 指定。
+- **CardKit 导入**：`.card` 文件可导入 [open.larkoffice.com/cardkit](https://open.larkoffice.com/cardkit) 渲染 + 可视化精调后再发。
+
+可直接发预览卡片，也可导入 CardKit 编辑后再发，都行。
