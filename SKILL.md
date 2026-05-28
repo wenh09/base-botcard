@@ -50,7 +50,7 @@ description: 生成飞书多维表格（Base）功能推广卡片的 JSON 2.0 .c
 - **痛点引入**："订单总延期？"提问式 / "告别 X"（每张卡 ≤1 处 告别）
 - **量化优先**："30 多款""200 万行"，有数字用数字，别说"很多/提升"
 - **emoji 克制**：整卡 ≤8 个；🔥 必双出 🔥🔥；标题纯功能可不带 emoji
-- **称呼语统一**：默认「你」；招募/B 端用「您」，不混用
+- **称呼语统一**：默认「你」；B 端 / 正式语境用「您」，不混用
 - **slogan**：AI 卡常用 `:GoGoGo:` 前缀（飞书 shortcode，仅飞书内渲染）
 
 ### Step 3 · 选渲染样式
@@ -101,9 +101,15 @@ bash bin/preview.sh <你的.card文件> <接收者open_id>
 
 **本 skill 不依赖任何图片工具，也不替用户安装。** 头图三种来源，由用户决定：
 
-1. **用户自己提供图** → `lark-cli im images create --as bot --file <图>` 拿 `img_key` 回填
+1. **用户自己提供图** → 上传拿 `img_key` 回填（上传命令见下方「⚠️ 上传命令」）
 2. **先留空** → 保留 `IMG_KEY_TODO`，`bin/preview.sh` 预览时自动跳过
 3. **想自动生成** → **推荐**（不强制）姊妹 skill `base-botbanner`，见下
+
+> **⚠️ 上传命令（lark-cli 1.0.27 的 `--file <路径>` 打不开文件，是 bug！用 stdin 管道绕过）：**
+> ```bash
+> cat <图.png> | lark-cli im images create --as bot --data '{"image_type":"message"}' --file "image=-"
+> ```
+> 返回里取 `image_key`（形如 `img_v3_xxx`）回填到卡片 body 第一个 `img` 的 `img_key`。`--file "image=路径"` 会报 `cannot open file`，别用。
 
 ### 引导用户自行安装（仅当用户想自动生成头图、且没装时）
 
@@ -116,7 +122,7 @@ bash bin/preview.sh <你的.card文件> <接收者open_id>
 用户装了 / 已可用后再走：
 - **输入**：功能描述 + 产品截图 / Figma URL（base-botbanner 必须要参考图）
 - **输出**：900×500 横幅 2x PNG（1800×1000）；它会先问 布局 A/B/C + 背景
-- **接回**：PNG → `lark-cli im images create --as bot --file <png>` 拿 `img_key` → 替换 `IMG_KEY_TODO`
+- **接回**：PNG → `cat <png> | lark-cli im images create --as bot --data '{"image_type":"message"}' --file "image=-"` 拿 `img_key` → 替换 `IMG_KEY_TODO`（注意 stdin 管道，见上方 ⚠️）
 
 用户不想装 / 没截图：就走来源 1 或 2，不要卡在头图上。
 
