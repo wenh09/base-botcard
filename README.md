@@ -11,10 +11,10 @@
 **人也能直接查**：
 | 想干嘛 | 看哪 |
 |---|---|
-| 怎么写文案 | [references/copywriting-findings.md](references/copywriting-findings.md) |
+| 怎么写文案 | [copy-rules.md](references/copy-rules.md) · 自检 [copy-checklist.md](references/copy-checklist.md) · 仿写 [golden-examples.md](references/golden-examples.md) |
 | DSL 怎么拼 / 有哪些坑 | [references/rendering-guide.md](references/rendering-guide.md) |
 | 要起步骨架 | [templates/单点功能.card](templates/单点功能.card) · [templates/多功能合集.card](templates/多功能合集.card) |
-| 看真实样例 | [references/samples/](references/samples/) |
+| 看真实样例 | [samples/](samples/)（[index](samples/index.md)） |
 | 发预览 | `bash bin/preview.sh <你的.card>` |
 | 要头图（可选） | 自行安装配套 skill **base-botbanner**（`npx skills add wenqianwenny/base-botbanner -g`）生成，出 2x PNG 后上传拿 `img_key`。**本 skill 不依赖它** |
 
@@ -29,18 +29,26 @@
 
 ```
 base-botcard/
-├── SKILL.md            # 入口：流程、判定、装配、自检
-├── workflow.md         # 信息收集与交互流程
+├── SKILL.md            # 入口：流程、判定、装配、自检、持续迭代
+├── workflow.md         # 信息收集（选择题+other）
 ├── references/
-│   ├── copywriting-findings.md   # 文案层规则
-│   ├── rendering-guide.md        # 渲染层规则（token/配色/容器/按钮/布局/踩坑）
-│   └── samples/                  # 5 张真实 .card 正面样本
-├── templates/
-│   ├── 单点功能.card
-│   └── 多功能合集.card
-└── bin/
-    └── preview.sh      # 发 IM 预览
+│   ├── copy-checklist.md     # ★ 文案黑名单自检闸（最高频）
+│   ├── copy-rules.md         # 文案导向：句式/痛点/tag·尾注/CTA/emoji
+│   ├── golden-examples.md    # ★ 内嵌标杆文案（自包含，仿写用）
+│   ├── rendering-guide.md    # 渲染层规则（token/配色/容器/按钮/布局/踩坑）
+│   ├── research-notes.md     # 归档：原始分析（少用）
+│   └── lessons.md            # ★ 个人自迭代流水账
+├── samples/{index.md, *.card}  # ★ 真实样本库（可由使用者扩充）
+├── templates/{单点功能, 多功能合集}.card
+├── preferences.local.md      # gitignore，个人偏好（不进 git）
+└── bin/preview.sh            # 发 IM 预览
 ```
+
+## 越用越好用（个人自迭代）
+
+- 每次纠正文案/渲染 → 记进 `references/lessons.md`，攒多了 consolidate 进正式规则
+- 拿到好 `.card` → 存进 `samples/` 并登记，样本库随使用者增长
+- 个人口味放 `preferences.local.md`（gitignore），不污染团队通用规则
 
 ## 几个必知的坑
 

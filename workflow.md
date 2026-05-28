@@ -17,13 +17,19 @@
 
 **信息不足不进入产出。** 循环：评估「已知 vs 缺口」→ 主动追问缺口 → 用户补充 → 再评估，直到足够为止。**一次性问，≤5 个问题**，能从 PRD 推断的绝不问。**PRD 几乎必缺的硬缺口**：灰度/发布状态、帮助文档/反馈链接、对外推广角度、头图素材。其他典型缺口：
 
-1. 这次推**几个功能**？（定 单点 / 合集）
-2. 一句话**核心价值**？（→ slogan）
-3. **2-4 个亮点**，每个给一个关键词 + 一句话
-4. 现在什么**阶段**？灰度 / 内测 / 超前内测 / 已上线（→ 尾注 + 标签）
-5. **帮助文档 / 反馈群链接**？**头图**有吗？
+**枚举型缺口 → 用 AskUserQuestion（给选项 + other），不要开放式 wait-for-input：**
+1. 推**几个功能**？→ 选项：单点 / 合集
+2. 什么**阶段**？→ 选项：功能上新(将全量) / 内测中(小范围)；以及这卡是 邀请进群 / 已灰度本群 / 已上线通知
+3. **头图**怎么办？→ 选项：我提供图 / 装 base-botbanner 生成 / 先留 TODO
+4. **布局**？→ 选项：纵向 / 左右并排 / 你定（注：长内容只能纵向）
 
-让用户用自己的话说，你负责润色成卡片风格（见 [references/copywriting-findings.md](references/copywriting-findings.md)）。
+**发散型 → 开放让用户自由说，你润色：**
+5. 一句话**核心价值**（slogan）+ **2-4 个亮点**（关键词 + 一句）
+6. **帮助文档 / 反馈群链接**（贴链接，没有就留 TODO）
+
+> **平衡**：能枚举的就给选项（省得来回打字），发散的才开放。**别为选项而选项**；能从 PRD 推断的不问；一次问清最关键的几个。
+
+文案规则见 [references/copy-rules.md](references/copy-rules.md)，出稿自检 [references/copy-checklist.md](references/copy-checklist.md)，仿写标杆 [references/golden-examples.md](references/golden-examples.md)。
 
 ## Phase 3 · 文案预览（先纯文字，别急着拼 JSON）
 
@@ -61,4 +67,4 @@ slogan：…
 - **能推断就别问**：PRD 里有的信息直接用
 - **批量问**：别一问一答 ping-pong，攒齐一次问
 - **先文字后样式**：文案没定不要拼 JSON，省返工
-- **用真实样本兜底**：拿不准布局就照 `references/samples/` 里同类卡抄结构
+- **用真实样本兜底**：拿不准布局就照 `samples/` 里同类卡抄结构（见 [samples/index.md](samples/index.md)）

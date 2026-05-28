@@ -2,3 +2,6 @@
 *.tmp
 /tmp/
 *.log
+
+# 个人偏好，不进 git（每人本地维护自己的）
+preferences.local.md
