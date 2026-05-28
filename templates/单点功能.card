@@ -1,0 +1,204 @@
+{
+  "name": "多维表格 AI 语音录入支持更多编辑入口",
+  "dsl": {
+    "schema": "2.0",
+    "config": {
+      "update_multi": true,
+      "style": {
+        "text_size": {
+          "normal_v2": { "default": "normal", "pc": "normal", "mobile": "heading" }
+        }
+      }
+    },
+    "body": {
+      "direction": "vertical",
+      "horizontal_spacing": "8px",
+      "vertical_spacing": "12px",
+      "horizontal_align": "left",
+      "vertical_align": "top",
+      "padding": "12px 12px 12px 12px",
+      "elements": [
+        {
+          "tag": "img",
+          "img_key": "IMG_KEY_TODO",
+          "preview": true,
+          "transparent": false,
+          "scale_type": "fit_horizontal",
+          "corner_radius": "8px",
+          "margin": "0px 0px 0px 0px"
+        },
+        {
+          "tag": "markdown",
+          "content": "**:GoGoGo:  说出你的需求，AI 即可理解并协助完成搭建、编辑与调整，让创作过程更自然高效**",
+          "text_align": "left",
+          "text_size": "normal_v2",
+          "margin": "0px 0px 0px 0px"
+        },
+        {
+          "tag": "column_set",
+          "flex_mode": "stretch",
+          "horizontal_spacing": "8px",
+          "horizontal_align": "left",
+          "columns": [
+            {
+              "tag": "column",
+              "width": "weighted",
+              "elements": [
+                {
+                  "tag": "interactive_container",
+                  "width": "fill",
+                  "height": "auto",
+                  "corner_radius": "8px",
+                  "elements": [
+                    {
+                      "tag": "markdown",
+                      "content": "<font color='blue'>**核心亮点** \n</font>",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "markdown",
+                      "content": "- **多入口可用**：AI 侧边栏、首页搭建对话框、仪表盘编辑、AI 编辑入口等场景均支持语音录入",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "markdown",
+                      "content": "- **表达更自然**：不用反复组织文字，直接说出想法，AI 帮你理解需求并继续推进",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "markdown",
+                      "content": "- **编辑更高效**：从搭建应用到调整图表、编辑内容，都可以通过语音快速发起指令",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    }
+                  ],
+                  "has_border": false,
+                  "background_style": "blue-50",
+                  "padding": "12px 8px 12px 8px",
+                  "direction": "vertical",
+                  "horizontal_spacing": "8px",
+                  "vertical_spacing": "8px",
+                  "horizontal_align": "left",
+                  "vertical_align": "top",
+                  "margin": "0px 0px 0px 0px"
+                },
+                {
+                  "tag": "interactive_container",
+                  "width": "fill",
+                  "height": "auto",
+                  "corner_radius": "8px",
+                  "elements": [
+                    {
+                      "tag": "markdown",
+                      "content": "<font color='blue'>**适用场景** \n</font>",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "markdown",
+                      "content": "- **快速搭建**：在首页搭建对话框中说出业务需求，快速开始搭建",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "markdown",
+                      "content": "- **数据分析**：在仪表盘编辑中用语音描述想看的指标或图表效果",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    },
+                    {
+                      "tag": "markdown",
+                      "content": "- **内容调整**：在 AI 编辑入口中直接说出修改要求，减少手动输入成本",
+                      "text_align": "left",
+                      "text_size": "normal_v2",
+                      "margin": "0px 0px 0px 0px"
+                    }
+                  ],
+                  "has_border": false,
+                  "background_style": "blue-50",
+                  "padding": "12px 8px 12px 8px",
+                  "direction": "vertical",
+                  "horizontal_spacing": "8px",
+                  "vertical_spacing": "8px",
+                  "horizontal_align": "left",
+                  "vertical_align": "top",
+                  "margin": "0px 0px 0px 0px"
+                }
+              ],
+              "direction": "vertical",
+              "horizontal_spacing": "8px",
+              "vertical_spacing": "8px",
+              "horizontal_align": "left",
+              "vertical_align": "top",
+              "margin": "0px 0px 0px 0px",
+              "weight": 1
+            }
+          ],
+          "margin": "0px 0px 0px 0px"
+        },
+        {
+          "tag": "markdown",
+          "content": "更多用法与技巧，可查看下方帮助文档 👇",
+          "text_align": "left",
+          "text_size": "normal_v2",
+          "margin": "0px 0px 0px 0px"
+        },
+        {
+          "tag": "hr",
+          "margin": "0px 0px 0px 0px"
+        },
+        {
+          "tag": "button",
+          "text": { "tag": "plain_text", "content": "查看帮助文档" },
+          "type": "primary",
+          "width": "fill",
+          "size": "medium",
+          "icon": { "tag": "standard_icon", "token": "file-link-docx_outlined" },
+          "behaviors": [
+            {
+              "type": "open_url",
+              "default_url": "HELP_DOC_URL_TODO",
+              "pc_url": "HELP_DOC_URL_TODO",
+              "ios_url": "HELP_DOC_URL_TODO",
+              "android_url": "HELP_DOC_URL_TODO"
+            }
+          ],
+          "margin": "0px 0px 0px 0px"
+        },
+        {
+          "tag": "div",
+          "text": {
+            "tag": "plain_text",
+            "content": "本群已开启灰度，欢迎体验并反馈～",
+            "text_size": "notation",
+            "text_align": "left",
+            "text_color": "grey"
+          },
+          "icon": { "tag": "standard_icon", "token": "person-admit_outlined", "color": "grey" },
+          "margin": "0px 0px 0px 0px"
+        }
+      ]
+    },
+    "header": {
+      "title": { "tag": "plain_text", "content": "多维表格 AI 语音录入支持更多编辑入口" },
+      "subtitle": { "tag": "plain_text", "content": "" },
+      "text_tag_list": [
+        { "tag": "text_tag", "text": { "tag": "plain_text", "content": "功能上新" }, "color": "green" }
+      ],
+      "template": "indigo",
+      "icon": { "tag": "standard_icon", "token": "ai-common_colorful" },
+      "padding": "12px 12px 12px 12px"
+    }
+  },
+  "variables": []
+}
