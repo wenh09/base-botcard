@@ -51,7 +51,7 @@ slogan：…
 ## Phase 4 · 装配 + IM 预览
 
 文案定稿后：
-1. **头图**（需要时）：用户提供图；或（可选）引导用户**自行安装** base-botbanner 生成（功能描述 + 截图 → 2x PNG）→ `lark-cli im images create --as bot --file <png>` 拿 `img_key`。不想装 / 没图就留 `IMG_KEY_TODO`，别卡住。
+1. **头图**（需要时）：用户提供图；或（可选）引导用户**自行安装** base-botbanner 生成（功能描述 + 截图 → 2x PNG）→ 上传拿 `img_key`（命令见 [SKILL.md](SKILL.md) 头图节 ⚠️：须用 stdin 管道，**不是** `--file <路径>`）。不想装 / 没图就留 `IMG_KEY_TODO`，别卡住。
 2. 按 [SKILL.md](SKILL.md) Step 3-5 装配 `.card`（填入 img_key）
 3. `bash bin/preview.sh <.card文件>` 发 IM 预览
 4. 用户看渲染 → 提改动 → 迭代（多半是配色 / 容器风格 / 按钮）
@@ -59,7 +59,7 @@ slogan：…
 ## Phase 5 · 交付
 
 输出 `.card` 文件 + TODO 清单：
-- `IMG_KEY_TODO` → 头图待上传：`lark-cli im images create --as bot --file <图>` 拿 `img_key` 回填
+- `IMG_KEY_TODO` → 头图待上传：`cat <图> | lark-cli im images create --as bot --data '{"image_type":"message"}' --file "image=-"` 拿 `img_key` 回填（⚠️ 1.0.27 的 `--file <路径>` 是 bug，见 [SKILL.md](SKILL.md)）
 - `HELP_DOC_URL_TODO` → 真实链接（四端 URL 都填）
 
 ## 原则
